@@ -13,17 +13,21 @@ var config = {
    event.preventDefault();
 
    // Grabs user input
-   var empName = $("#employee-name-input").val().trim();
-   var empRole = $("#destination-input").val().trim();
-   var empStart = $("#start-input").val().trim();
-   var empRate = $("#rate-input").val().trim();
+   var trainName = $("#train-name-input").val().trim();
+   var destination = $("#role-input").val().trim();
+   var firstTrain = $("#start-input").val().trim();
+   var frequency = $("#rate-input").val().trim();
+    var timeLeft = (frequency + firstTrain)
+   var startTime;
+   
 
    // Creates local “temporary” object for holding employee data
    var newEmp = {
-     name: empName,
-     destination: empRole,
-     start: empStart,
-     rate: empRate
+     name: trainName,
+     role: destination,
+     start: firstTrain,
+     rate: frequency,
+     mins:timeLeft
    };
 
    // Uploads employee data to the database
@@ -34,8 +38,8 @@ var config = {
    alert("Train successfully added");
 
    // Clears all of the text-boxes
-   $("#employee-name-input").val("");
-   $("#destination-input").val("");
+   $("#train-name-input").val("");
+   $("#role-input").val("");
    $("#start-input").val("");
    $("#rate-input").val("");
  });
@@ -44,28 +48,31 @@ var config = {
  database.ref().on("child_added", function(childSnapshot) {
  
    
+    var timeLeft = (frequency + firstTrain)
 
-
-   // Store everything into a variable.
-   var empName = childSnapshot.val().name;
-   var empRole = childSnapshot.val().role;
-   var empStart = childSnapshot.val().startDate;
-   var empRate = childSnapshot.val().rate;
-
-   
+   var trainName = childSnapshot.val().name;
+   var destination = childSnapshot.val().role;
+   var firstTrain = childSnapshot.val().start;
+   var frequency = childSnapshot.val().rate;
+   var timeLeft = childSnapshot.val().mins;
 
    
+
+ 
+
+
+
    var empMonths = moment().format('LT');
 
-   // Calculate the total billed rate
- 
-   // Create the new row
+
+
    var newRow = $("<tr>").append(
-     $("<td>").text(empName),
-     $("<td>").text(empRole),
-     $("<td>").text(empRate),
-     $("<td>").text(empMonths),
-     $("<td>").text(),
+     $("<td>").text(trainName),
+     $("<td>").text(destination),
+     $("<td>").text(frequency ),
+     $("<td>").text(firstTrain),
+     //$("<td>").text(firstTrain),
+     $("<td>").text(timeLeft),
    
    );
 

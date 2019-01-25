@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Employee Data Management</title>
+    <title>train scheduler</title>
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
@@ -56,21 +56,23 @@
                         <form>
                           <div class="form-group">
                             <label for="employee-name-input">Train Name</label>
-                            <input class="form-control" id="employee-name-input" type="text">
+                            <input class="form-control" id="employee-name-input" type="text" placeholder="thomas">
                           </div>
                           <div class="form-group">
-                            <label for="destination-input">Destination</label>
-                            <input class="form-control" id="destination-input"  type="text">
+                            <label for="role-input">Destination</label>
+                            <input class="form-control" id="role-input"  type="text" placeholder="Dallas">
                           </div>
                           <div class="form-group">
                             <label for="start-input">First Train Time</label>
-                            <input class="form-control" id="start-input" type="time">
+                            <input class="form-control" id="start-input" type="time" placeholder="00:00">
+                            
                           </div>
                           <div class="form-group">
                             <label for="rate-input">Frequency (min)</label>
-                            <input class="form-control" id="rate-input"  type="number">
+                            <input class="form-control" id="rate-input"  type="minutes" placeholder="00">
                           </div>
                           <button class="btn btn-primary float-right" id="submit-button">Submit</button>
+                          
                         </form>
             
                       </div>
