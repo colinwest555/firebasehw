@@ -1,0 +1,59 @@
+body {
+    margin: 0 auto;
+    padding: 0 20%;
+   
+ 
+ }
+ 
+ .jumbotron {
+   
+    background-size: 100%;
+    color: #262626;
+    border: 1px solid #35A8A9;
+    font-family: ‘Roboto Mono’, monospace;
+ 
+ }
+ 
+ .card {
+    border: 1px solid #35A8A9;
+ 
+ }
+ 
+ .card-header {
+    background-color: #D6E8DA;
+    font-family: ‘Roboto Mono’, monospace;
+    font-size: 24px;
+ 
+ }
+ 
+ .current-employees {
+    margin-bottom: 25px;
+ 
+ }
+ 
+ h3 {
+    font-size: 16px;
+ }
+ 
+ .underline {
+    border-bottom: 1px solid #D6E8DA;
+ }
+ 
+ .header {
+    width: 100%;
+ }
+ 
+ #submit-button {
+    margin-bottom: 25px;
+    background-color: #F37202;
+    font-family: ‘Roboto Mono’, monospace;
+ 
+ }
+ 
+ .add-employees {
+    margin-bottom: 25px;
+ }
+ 
+ input {
+    border: 5px solid #000;
+ }
